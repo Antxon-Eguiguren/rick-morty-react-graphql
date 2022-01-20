@@ -1,0 +1,43 @@
+.button-container-desktop {
+  display: flex;
+  align-self: flex-end;
+}
+
+.button-container-mobile {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  width: 39px;
+  height: 39px;
+  border-radius: 50px;
+  border: 1px solid hsl(0, 0%, 80%);
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0 2px 3px rgb(0 0 0 / 0.2);
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid hsl(0, 0%, 70%);
+}
+
+.btn:active {
+  transform: translate(1px, 2px);
+  transition: all 0.1s ease-in-out;
+  box-shadow: none;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  color: grey;
+}
+
+.delete-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  color: #3cb4c6;
+}

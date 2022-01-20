@@ -1,0 +1,51 @@
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.arrows {
+  font-size: 28px;
+  color: hsl(0, 0%, 18%);
+  border: 1px solid hsl(0, 0%, 30%);
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.arrows:first-child {
+  margin-right: 40px;
+}
+
+.arrows:last-child {
+  margin-left: 40px;
+}
+
+.arrows:hover {
+  cursor: pointer;
+  color: black;
+  border: 1px solid black;
+}
+
+.arrows.disabled {
+  color: hsl(0, 0%, 70%);
+  border: 1px solid hsl(0, 0%, 70%);
+}
+
+.arrows.disabled:hover {
+  cursor: not-allowed;
+}
+
+.pages-info {
+  font-size: 21px;
+}
+
+.total-characters {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 50px;
+  letter-spacing: 0.3px;
+  font-weight: 100;
+}

@@ -1,0 +1,67 @@
+.filter-form-desktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filter-form-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
+  color: #3cb4c6;
+}
+
+.mobile-label-container {
+  padding-bottom: 20px;
+}
+
+.input-name {
+  height: 31px;
+  width: 160px;
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  padding-left: 10px;
+  padding-top: 2px;
+  margin-top: 4px;
+  border-radius: 50px;
+  border: 1px solid hsl(0, 0%, 80%);
+  color: hsl(0, 0%, 45%);
+}
+
+.input-name:focus {
+  outline-color: #2684ff;
+}
+
+.input-name:hover {
+  border: 1px solid hsl(0, 0%, 70%);
+  cursor: pointer;
+}
+
+.select {
+  width: 175px;
+  color: black;
+  padding-top: 3px;
+}
+
+.css-1s2u09g-control,
+.css-1pahdxg-control {
+  border-radius: 50px !important;
+}
+
+.css-1s2u09g-control:hover {
+  cursor: pointer;
+}
+
+.css-qc6sy-singleValue {
+  color: hsl(0, 0%, 45%) !important;
+  letter-spacing: 0.1px !important;
+}

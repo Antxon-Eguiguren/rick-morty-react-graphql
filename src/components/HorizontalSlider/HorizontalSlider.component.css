@@ -1,0 +1,60 @@
+.slick-slider {
+  cursor: grabbing;
+}
+
+.slick-slide > div {
+  margin: 0 15px;
+}
+
+.slick-list {
+  margin: 0 -15px;
+}
+
+.slick-next {
+  top: 70%;
+  right: 35%;
+  z-index: 999;
+}
+
+.slick-prev {
+  top: 70%;
+  left: 35%;
+  z-index: 999;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  font-size: 40px;
+  color: grey;
+}
+
+.episode-container {
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.episode {
+  background-color: rgba(255, 191, 118, 0.493);
+  margin-bottom: 150px;
+  height: 150px;
+  border: 1px solid black;
+  box-shadow: 0 0 20px rgb(0 0 0 / 0.2);
+  border-radius: 8px;
+  position: relative;
+}
+
+.episode-title {
+  padding: 0 15px;
+  letter-spacing: 0.5px;
+  font-size: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.episode-date {
+  position: absolute;
+  top: 100px;
+  padding: 0 15px;
+}
