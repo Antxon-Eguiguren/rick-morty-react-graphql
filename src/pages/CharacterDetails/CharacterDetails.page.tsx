@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useCharacter } from '../../hooks/useCharacter';
 import { useMediaQueries } from '../../hooks/useMediaQueries';
@@ -9,7 +9,6 @@ import { IoIosArrowRoundBack } from 'react-icons/io';
 import './CharacterDetails.page.css';
 
 const CharacterDetails = () => {
-  const [randomColor, setRandomColor] = useState<string>('#FFF38C');
   const { characterId } = useParams();
   const { data, error, loading } = useCharacter(+characterId!);
   const { isLaptopScreen } = useMediaQueries();
@@ -19,7 +18,6 @@ const CharacterDetails = () => {
     if (isNaN(+characterId!) || !characterId) {
       navigate('/characters');
     }
-    setRandomColor('#' + Math.floor(Math.random() * 16777215).toString(16));
   }, []);
 
   return (
@@ -42,26 +40,31 @@ const CharacterDetails = () => {
             {!isLaptopScreen && <h2 className="name">{data.character.name}</h2>}
             <img src={data.character.image} className="img" />
             <div className="blob-container">
-              <Blob fill={randomColor} width="500px" />
+              <Blob fill="#B1FF09" width="350px" />
               <div className="blob-texts">
                 <p className="label-container">
                   <span className="label">Name: </span>
-                  {data.character.name}
+                  <span className="blob-text">{data.character.name}</span>
                 </p>
                 <p className="label-container">
-                  <span className="label">ID: </span> {data.character.id}
+                  <span className="label">ID: </span>
+                  <span className="blob-text">{data.character.id}</span>
                 </p>
                 <p className="label-container">
-                  <span className="label">Specie: </span> {data.character.species}
+                  <span className="label">Specie: </span>
+                  <span className="blob-text">{data.character.species}</span>
                 </p>
                 <p className="label-container">
-                  <span className="label">Status: </span> {data.character.status}
+                  <span className="label">Status: </span>
+                  <span className="blob-text">{data.character.status}</span>
                 </p>
                 <p className="label-container">
-                  <span className="label">Gender: </span> {data.character.gender}
+                  <span className="label">Gender: </span>
+                  <span className="blob-text">{data.character.gender}</span>
                 </p>
                 <p className="label-container">
-                  <span className="label">Location: </span> {data.character.location?.name}
+                  <span className="label">Location: </span>
+                  <span className="blob-text">{data.character.location?.name}</span>
                 </p>
               </div>
             </div>
