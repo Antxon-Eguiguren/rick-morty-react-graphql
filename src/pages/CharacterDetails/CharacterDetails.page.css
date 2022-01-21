@@ -56,17 +56,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .blob-texts {
   position: absolute;
   top: 180px;
+  font-size: 14px;
+  margin: 0 10px;
 }
 
 .label-container {
   display: flex;
   justify-content: space-between;
-  text-align: justify;
+  text-align: right;
 }
 
 .label {

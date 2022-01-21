@@ -13,13 +13,11 @@
 .slick-next {
   top: 70%;
   right: 35%;
-  z-index: 999;
 }
 
 .slick-prev {
   top: 70%;
   left: 35%;
-  z-index: 999;
 }
 
 .slick-next:before,

@@ -42,7 +42,7 @@ const CharacterDetails = () => {
             {!isLaptopScreen && <h2 className="name">{data.character.name}</h2>}
             <img src={data.character.image} className="img" />
             <div className="blob-container">
-              <Blob fill={randomColor} width="205%" />
+              <Blob fill={randomColor} width="500px" />
               <div className="blob-texts">
                 <p className="label-container">
                   <span className="label">Name: </span>
