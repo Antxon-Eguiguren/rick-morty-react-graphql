@@ -11,7 +11,7 @@ import './CharacterDetails.page.css';
 const CharacterDetails = () => {
   const { characterId } = useParams();
   const { data, error, loading } = useCharacter(+characterId!);
-  const { isLaptopScreen } = useMediaQueries();
+  const { isMobileScreen } = useMediaQueries();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const CharacterDetails = () => {
         <Link to="/characters">
           <IoIosArrowRoundBack className="arrow-back" />
         </Link>
-        {data && isLaptopScreen && <h2 className="name-header">{data.character.name}</h2>}
+        {data && isMobileScreen && <h2 className="name-header">{data.character.name}</h2>}
       </nav>
       {(loading || error) && (
         <div className="loading-error-container">
@@ -37,7 +37,7 @@ const CharacterDetails = () => {
       {data && (
         <>
           <div className="container">
-            {!isLaptopScreen && <h2 className="name">{data.character.name}</h2>}
+            {!isMobileScreen && <h2 className="name">{data.character.name}</h2>}
             <img src={data.character.image} className="img" />
             <div className="blob-container">
               <Blob fill="#B1FF09" width="350px" />
@@ -71,14 +71,8 @@ const CharacterDetails = () => {
           </div>
           {data.character.episode.length > 0 && (
             <>
-              <h4
-                className={
-                  data.character.episode.length < 3 ? 'episodes-title-centered' : 'episodes-title'
-                }
-              >
-                Episodes: {data.character.episode.length}
-              </h4>
-              <HorizontalSlider episodes={data.character.episode} />
+              <h4 className="episodes-title">Episodes: {data.character.episode.length}</h4>
+              <HorizontalSlider episodes={data.character.episode} isMobileScreen={isMobileScreen} />
             </>
           )}
         </>

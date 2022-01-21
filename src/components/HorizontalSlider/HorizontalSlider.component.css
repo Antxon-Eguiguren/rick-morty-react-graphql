@@ -1,5 +1,6 @@
 .slick-slider {
   cursor: grabbing;
+  padding-bottom: 120px;
 }
 
 .slick-slide > div {
@@ -14,15 +15,22 @@
   display: none !important;
 }
 
-.episode-container {
-  margin-left: 28px;
-  margin-right: 28px;
+.slick-dots {
+  margin-bottom: 90px;
+}
+
+.episode-container-mobile {
+  margin: 0px 28px;
+}
+
+.episode-container-desktop {
+  margin: 0 auto;
+  width: 80%;
 }
 
 .episode {
   position: relative;
   background-color: rgba(255, 191, 118, 0.493);
-  margin-bottom: 100px;
   height: 120px;
   border: 1px solid black;
   box-shadow: 0 0 20px rgb(0 0 0 / 0.2);

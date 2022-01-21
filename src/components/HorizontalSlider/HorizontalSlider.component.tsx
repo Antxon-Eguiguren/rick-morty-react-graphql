@@ -1,18 +1,30 @@
-import { Key, ReactChild, ReactFragment, ReactPortal } from 'react';
+import { Episode } from '../../interfaces/Character.interface';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './HorizontalSlider.component.css';
 
-export const HorizontalSlider = ({ episodes }: any) => {
+interface Props {
+  episodes: Episode[];
+  isMobileScreen: boolean;
+}
+
+export const HorizontalSlider = ({ episodes, isMobileScreen }: Props) => {
   const settings = {
-    dots: false,
+    dots: !isMobileScreen,
     infinite: false,
     speed: 250,
-    slidesToShow: 4.2,
-    slidesToScroll: 4,
+    slidesToShow: 6.2,
+    slidesToScroll: 6,
     initialSlide: 0,
     responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 4.2,
+          slidesToScroll: 4,
+        },
+      },
       {
         breakpoint: 1023,
         settings: {
@@ -38,20 +50,14 @@ export const HorizontalSlider = ({ episodes }: any) => {
   };
 
   return (
-    <div className="episode-container">
+    <div className={isMobileScreen ? 'episode-container-mobile' : 'episode-container-desktop'}>
       <Slider {...settings}>
-        {episodes.map(
-          (episode: {
-            id: Key | null | undefined;
-            name: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined;
-            air_date: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined;
-          }) => (
-            <div key={episode.id} className="episode">
-              <h3 className="episode-title">{episode.name}</h3>
-              <p className="episode-date">{episode.air_date}</p>
-            </div>
-          )
-        )}
+        {episodes.map((episode) => (
+          <div key={episode.id} className="episode">
+            <h3 className="episode-title">{episode.name}</h3>
+            <p className="episode-date">{episode.air_date}</p>
+          </div>
+        ))}
       </Slider>
     </div>
   );

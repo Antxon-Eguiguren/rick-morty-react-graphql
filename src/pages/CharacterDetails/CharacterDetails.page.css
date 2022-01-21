@@ -85,12 +85,5 @@
 .episodes-title {
   margin-top: 20px;
   font-size: 21px;
-  margin-left: 28px;
-}
-
-.episodes-title-centered {
-  margin-top: 0px;
-  font-size: 21px;
-  margin-left: 28px;
   text-align: center;
 }
